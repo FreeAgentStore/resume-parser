@@ -1,0 +1,30 @@
+{
+  "name": "@freeagentstore/resume-parser",
+  "version": "1.0.0",
+  "description": "Parse resumes into structured JSON — name, email, skills, experience, education. Heuristic evolved from 500+ resumes.",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "files": ["dist", "src"],
+  "scripts": {
+    "build": "tsup src/index.ts --format esm --dts --clean",
+    "typecheck": "tsc --noEmit",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": ["freeagentstore", "ai", "browser", "heuristic"],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/FreeAgentStore/resume-parser.git"
+  },
+  "devDependencies": {
+    "tsup": "^8.0.0",
+    "typescript": "^5.7.0"
+  }
+}
